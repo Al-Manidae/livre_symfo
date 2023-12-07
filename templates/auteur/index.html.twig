@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les auteurs{% endblock %}
+
+{% block body %}
+    {% block header %}
+        {% include "partials/_header.html.twig" %}
+    {% endblock %}
+
+    <div class="example-wrapper">
+        <h1>Les auteurs ✅</h1>
+
+        <div class="container">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Auteur</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for auteur in auteur %}
+                            <tr>
+                            <td>{{auteur.id}}</td>
+                            <td>{{auteur.nom}}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+{% endblock %}

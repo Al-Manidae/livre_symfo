@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les éditeurs{% endblock %}
+
+{% block body %}
+    {% block header %}
+        {% include "partials/_header.html.twig" %}
+    {% endblock %}
+
+    <div class="example-wrapper">
+        <h1>Les éditeurs ✅</h1>
+
+        <div class="container">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Éditeur</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for editeur in editeur %}
+                            <tr>
+                            <td>{{editeur.id}}</td>
+                            <td>{{editeur.nom}}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+{% endblock %}
